@@ -6,10 +6,10 @@ CREATE TABLE IF NOT EXISTS login_details
 (
     u_name VARCHAR(50) NOT NULL,
     u_email VARCHAR(50) PRIMARY KEY,
-    u_password VARCHAR(6) NOT NULL,
+    u_password varchar(20) NOT NULL,
     u_phoneno INT(10),
     u_joined_year INT(4),
-    u_photo TEXT
+    u_photo TEXT default "D:\xampp\htdocs\old_books_project\images\default-profile-pic.jpg"
 );
 
 CREATE TABLE IF NOT EXISTS book_details
@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS book_details
     book_author text not null,
     price int not null,
     catagory varchar(50) not null,
-    book_image text,
+    book_image text default "D:\xampp\htdocs\old_books_project\images\default-book-image.png",
     is_ordered varchar(50) not null,
     primary key(book_id),
     foreign key (u_email) REFERENCES login_details(u_email)
@@ -33,7 +33,14 @@ CREATE TABLE IF NOT EXISTS order_table
     book_id int ,
     customer_email varchar(50) NOT NULL,
     order_time timestamp NOT NULL,
-    foreign key customer_email REFERENCES login_details(u_email)
+    foreign key (customer_email) REFERENCES login_details(u_email)
 );
 
+-- Adding foreign key
+alter table order_table
+add constraint foreign key(book_id) REFERENCES book_details(book_id);
+
+-- Adding foreign key
+alter table order_table 
+add constraint foreign key(owner_email) REFERENCES login_details(u_email);
 
