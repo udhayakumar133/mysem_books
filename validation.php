@@ -17,7 +17,7 @@
         }
         function name($input)
         {
-            if(!preg_match("/^[a-z' -]$/i",$input))
+            if(!preg_match("/^.*[a-z].*[A-Z]$/i",$input))
             return true;
             else
             return false;
@@ -31,10 +31,21 @@
         }
         function password($input)
         {
-            if(!preg_match("/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$/",$input))
+            if(!preg_match(" /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/",$input))
             return true;
             else 
-            return false;          
+            return false; 
+            return false;
+        }
+
+        function user_exists($email,$table_name,$conn)
+        {
+            $query="SELECT count(*) FROM $table_name WHERE u_email='$email'";
+            $query_result=mysqli_fetch_array(mysqli_query($conn,$query));
+            if($query_result["count(*)"]==0)
+            return true;
+            else 
+            return false;
         }
     }
 ?>
