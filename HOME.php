@@ -52,6 +52,7 @@
                 eligendi officiis veniam magnam quia soluta sequi voluptatum!
             </p>
         </div>
+        <div class="summa"></div>
     </footer>
 </body>
 </html>
