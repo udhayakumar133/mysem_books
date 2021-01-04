@@ -31,6 +31,88 @@ ul li a:hover{
     background-color:#1b9bff;
 }
 
+/* part 2 search box  */
+
+.cont-2
+{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    padding-top: 5%;
+}
+
+/* search box creation */
+
+
+.cont-2 .search-box
+{
+    width: 70%;
+    padding-left: 5%;
+    display: flex;
+}
+
+.cont-2 .search-box input
+{
+    height: 40%;
+    width: 70%;
+    border: none;
+    outline: none;
+    padding: 0px 0px;
+    color: #1b9bff;
+    font-size: 18px;
+    border: 2px solid #1b9bff;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.cont-2 .search-box label.icon
+{
+    width: 25%;
+    height: 40%;
+    font-size: 20px;
+    padding: 2%;
+    color: #fff;
+    text-align: center;
+    background: #1b9bff;
+    border-radius: 0 5px 5px 0;
+}
+
+.cont-2 .search-box label.icon:hover
+{
+    cursor: pointer;
+    background: red;
+}
+
+/* Log in button creation */
+
+.cont-2 .login-btn
+{
+    width: 30%;
+    
+}
+
+.cont-2 .login-btn button
+{
+    width: 25%;
+    height: 40%;
+    padding: 18px;
+    font-family: monospace, serif;
+    font-weight: bold;
+    font-size: 1em;
+    color: #fff;
+    text-align: center;
+    background: red;
+    float: right;
+    margin-right: 10%;
+    border: 0;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.cont-2 .login-btn button:hover
+{
+    cursor: pointer;
+    background: #1b9bff;
+}
 /* part 2
     banner image for old books */
 
