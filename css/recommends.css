@@ -31,7 +31,7 @@ ul li a:hover{
     background-color:#1b9bff;
 }
 
-/* search box */
+/* part 2 search box  */
 
 .cont-2
 {
@@ -41,7 +41,9 @@ ul li a:hover{
     position: relative;
     padding-top: 5%;
 }
+
 /* search box creation */
+
 
 .cont-2 .search-box
 {

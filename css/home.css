@@ -1,12 +1,16 @@
-*
-{
-    margin: 0;
+*{
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
+body{
+    margin: 0;
+    font-family: monospace;
+}
 
-/* part 1
-    header for old books */
+/* First part
+    Navication bar content */
+
 ul{
     width: 100%;
     background:  #0082e6;
@@ -31,7 +35,8 @@ ul li a:hover{
     background-color:#1b9bff;
 }
 
-/* search box */
+/* Second part 
+    Serch box content */
 
 .cont-2
 {
@@ -41,7 +46,9 @@ ul li a:hover{
     position: relative;
     padding-top: 5%;
 }
+
 /* search box creation */
+
 
 .cont-2 .search-box
 {
@@ -111,60 +118,99 @@ ul li a:hover{
     cursor: pointer;
     background: #1b9bff;
 }
-/* part 2
-    banner image for old books */
-
-.img-box
-{
-    height: 200px;
-    width: 100%;
-    background: red;
-    margin-top: 2%;
-}
-
-.img-box img 
-{
-    height: 200px;
-    width: 100%;
-}
 
 /* part 3
-    button for user account */
+    banner content */
 
-.c-btns
+.banner
 {
+    height: 400px;
+    width: 100%;
+}
+
+.banner img
+{
+    height: 400px;
+    width: 100%;
+}
+
+/* part 4
+    new page heading */
+
+.heading-1
+{
+    width: 100%;
     height: auto;
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 2%;
-    border: 0px solid black;
-    border-radius: 5px 5px 5px 5px;
-}
-
-.c-btns p
-{
+    margin-top: 5%;
+    text-align: center;
     font-family: sans-serif;
+    background: rosybrown;
+}
+
+/* part 5
+    new books details */
+
+.cont-3
+{
+    width: 100%;
+    background: lemonchiffon;
+    margin-top: 5%;
+}
+
+.cont-3 p
+{
+    font-family: monospace;
+    font-size: 2.5em;
+    padding: 2%;
+
+}
+
+/* part 6
+    old books heading */
+
+.heading-2
+{
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+    text-align: center;
+    font-family: sans-serif;
+    background: rosybrown;
+}
+
+/* part 7
+    old books details */
+
+.cont-4
+{
+    width: 100%;
+    background: lemonchiffon;
+    margin-top: 5%;
+}
+
+.cont-4 p
+{
+    font-family: monospace;
+    font-size: 2.5em;
+    padding: 2%;
+
+}
+
+/* part 8
+    footer details */
+
+.footer-c
+{
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+    background: wheat;
+}
+
+.footer-c p
+{
     font-size: 2em;
-    text-align: center;
+    padding: 2%;
 }
 
-.c-btns button
-{
-    padding: 8px;
-    font-size: 18px;
-    text-align: center;
-    border: 0;
-    font-weight: bold;
-    margin-left: 5%;
-    margin-top: 1%;
-    border-radius: 5px;
-    width: 16%;
-    color: #fff;
-    background: #1b9bff;
-}
 
-.c-btns button:hover
-{
-    background: red;
-    cursor: pointer;
-}

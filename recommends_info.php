@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/RECOMMENDS_INFO.css" >
+    <link rel="stylesheet" type="text/css" href="css/recommends_info.css" >
     <title>Document</title>
 </head>
 <body>
         <ul>
-            <li><a href="HOME.php">Home</a></li>
-            <li><a href="OLD BOOKS.php">Books</a></li>
-            <li><a href="RECOMMENDS.php">Recommend</a></li>
-            <li><a href="LOGIN.php">Login</a></li>
-            <li><a href="MY ACCOUNT.php">My Account</a></li>
+            <li><a href="home.php">Home</a></li>
+            <li><a href="old_books.php">Old Books</a></li>
+            <li><a href="recommends.php">Recommend</a></li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="my_account.php">My Account</a></li>
         </ul>
     
     <div class="infoHeader">
@@ -52,8 +52,6 @@
                     <option value="">OTHERS</option>
 
                 </select><div class="space"></div><br>
-                <label class="bookDetails">gmail</label><br><input name="l_gmail" type="text" placeholder="Enter your Gmail address"><div class="space"></div><br>
-                <label class="bookDetails">Your Name</label><br><input name="l_yName" type="text" placeholder="Enter Your name"><div class="space"></div><br>
                 <label class="bookDetails">Discription</label><br><!--<textarea name="" name="" cols="62" rows="5" placeholder="type your discription here "></textarea>-->
                 <input name="l_disc" type="text" placeholder="Enter your discription "><div class="space"></div><br>
                 <label class="bookDetails">Enter your Pdf/document Link Here</label><br>
@@ -61,7 +59,6 @@
             </div>
 	
 	    <div class="c-btn-1">
-         
             <button>Button</button>
         </div>
         </form>

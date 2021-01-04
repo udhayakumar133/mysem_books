@@ -8,7 +8,8 @@
 <body>
     <ul>
         <li><a href="home.php">Home</a></li>
-        <li><a href="new_books.php">Books</a></li>
+        <li><a href="new_books.php">Old Books</a></li>
+        <li><a href="recommends.php">Books</a></li>
         <li><a href="login.php">Login</a></li>
         <li><a href="my_account.php">My Account</a></li>
     </ul>
