@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: monospace;
+}
+
+/* First part
+    Navication bar content */
+
+ul{
+    width: 100%;
+    background:  #0082e6;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+ul li a{
+    text-decoration: none;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    display: inline-block;
+    margin: 0px 20px;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+}
+ul li a:hover{
+    background-color:#1b9bff;
+}
+
+
+
+
+/* Part 2
+    information about the page */
+
+.infoHeader
+{
+margin-top: 0%;
+opacity: 0.8;
+width: 100%;
+background: #fff;
+}
+    
+.infoHeader h2
+{
+color: red;
+padding: 3px;
+font-size: 1.5em;
+border: 1px solid red;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-weight: bold;
+}
+
+/* Part -4 
+    Other books link/pdf addind container */
+
+.otherBooks-F
+{
+    width: 100%;
+    margin-top: 2%;
+    position: relative;
+    color:#1b9bff;
+    border-radius: 5px;
+    border: 3px solid red;
+}
+
+.otherBooks-F .content-1
+{
+    width: 50%;
+    padding: 3%;
+    position: relative;
+
+}
+
+.otherBooks-F label.bookDetails
+{
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font: 1em sans-serif;
+    text-transform: uppercase;
+}
+
+.otherBooks-F input,textarea
+{
+    width: 100%;
+    padding: 5px;
+}
+
+/* Button style */
+
+.c-btn-1 button
+{
+    padding: 8px;
+    font-size: 18px;
+    text-align: center;
+    border: 0;
+    font-weight: bold;
+    margin-left: 5%;
+    margin-top: 1%;
+    border-radius: 5px;
+    width: 16%;
+    color: #fff;
+    background: #1b9bff;
+}
+
+.c-btn-1 button:hover
+{
+    background: red;
+    cursor: pointer;
+}

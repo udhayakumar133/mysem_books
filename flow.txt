@@ -1,0 +1,14 @@
+ 
+Before Log In
+ 
+1) home.php  --->  
+        Nav { 
+            Home        =>    home.php
+            Old Books   =>    login_info.php  =>  old_books.php
+            Recommend   =>    login_info.php  =>  recommend.php
+            Login       =>    Login.php       =>  my_account.php 
+            My Account  =>    login_info.php  =>  my_account.php
+        } 
+
+After Log In
+
