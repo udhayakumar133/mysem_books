@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS book_details
     price int not null,
     catagory varchar(50) not null,
     book_image text default "D:\xampp\htdocs\old_books_project\images\default-book-image.png",
-    is_ordered varchar(50) not null,
+    is_ordered varchar(50) default "not ordered",
     primary key(book_id),
     foreign key (u_email) REFERENCES login_details(u_email)
 );
