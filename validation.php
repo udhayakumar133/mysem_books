@@ -42,7 +42,14 @@ class validation
             return true;
         else
             return false;
-        return false;
+    }
+
+    function url($input)
+    {
+        if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i", $input))
+            return true;
+        else
+            return false;
     }
 
     function user_exists($email, $table_name, $conn)

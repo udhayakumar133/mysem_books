@@ -26,6 +26,24 @@ CREATE TABLE IF NOT EXISTS book_details
     foreign key (u_email) REFERENCES login_details(u_email)
 );
 
+alter table book_details
+add book_description text not null;
+
+CREATE TABLE IF NOT EXISTS book_link_details
+(
+    book_link_id int auto_increment,
+    u_email varchar(50) not null,
+    link_book_name text not null,
+    link_book_author text not null,
+    link_book_catagory varchar(50) not null,
+    link_book_link varchar(100) not null,
+    primary key(book_link_id),
+    foreign key (u_email) REFERENCES login_details(u_email)
+);
+
+alter table book_link_details
+add link_book_description text not null;
+
 CREATE TABLE IF NOT EXISTS order_table
 (
     order_id int PRIMARY KEY auto_increment,

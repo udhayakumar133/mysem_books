@@ -70,31 +70,7 @@ if (isset($_POST['add_book']) && isset($_SESSION["email"])) {
     <title>Document</title>
 
     <!-- CSS for indication of book added or not -->
-    <style>
-        .result-container {
-            padding: 20px;
-            width: fit-content;
-            font-family: sans-serif;
-            border-radius: 5px;
-            display: none;
-            transform: scale(0);
-            transition: 0.5s;
-        }
-
-        .added,
-        .not-added {
-            display: block;
-            transform: scale(1);
-        }
-
-        .added {
-            background-color: green;
-        }
-
-        .not-added {
-            background-color: red;
-        }
-    </style>
+    <link rel="stylesheet" href="css/result_indication.css">
 
 </head>
 
@@ -116,7 +92,7 @@ if (isset($_POST['add_book']) && isset($_SESSION["email"])) {
     </div>
 
     <!-- Linking external javascript file -->
-    <script src="old_books_info.js"></script>
+    <script src="js/old_books_info.js"></script>
 
     <?php
 
@@ -130,7 +106,7 @@ if (isset($_POST['add_book']) && isset($_SESSION["email"])) {
         $image_name = time() . "." . $image_type;
 
         // Path of the book image
-        $image_path = "D:/xampp/htdocs/my/mysem_books/book_image/$image_name";
+        $image_path = "D:/xampp/htdocs/my/mysem_books/book_images/$image_name";
 
         // Checking if the book image file is uploaded
         if (move_uploaded_file($book_image["tmp_name"], $image_path)) {
@@ -138,7 +114,7 @@ if (isset($_POST['add_book']) && isset($_SESSION["email"])) {
             $errors["bookimage"] = "";
 
             // Inserting values into the database
-            $sql = "INSERT INTO book_details(u_email,book_name,book_author,price,catagory,book_image) VALUES('$user_email','$book_name','$author_name','$book_price','$book_catagory','$image_path')";
+            $sql = "INSERT INTO book_details(u_email,book_name,book_author,price,catagory,book_image,book_description) VALUES('$user_email','$book_name','$author_name','$book_price','$book_catagory','$image_path','$book_description')";
             $query_result = mysqli_query($conn, $sql);
 
             // Checking if the query executed Successfully
