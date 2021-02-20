@@ -1,0 +1,23 @@
+.result-container {
+  padding: 20px;
+  width: fit-content;
+  font-family: sans-serif;
+  border-radius: 5px;
+  display: none;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.added,
+.not-added {
+  display: block;
+  transform: scale(1);
+}
+
+.added {
+  background-color: green;
+}
+
+.not-added {
+  background-color: red;
+}
