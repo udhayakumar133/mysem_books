@@ -47,10 +47,10 @@ if (isset($_POST['add_book']) && isset($_SESSION["email"])) {
         $errors["authorname"] = "";
 
     // Validating description 
-    if ($validation_obj->description($book_description))
-        $errors["bookdescription"] = "Invalid book description";
-    else
-        $errors["bookdescription"] = "";
+    //if ($validation_obj->description($book_description))
+    //    $errors["bookdescription"] = "Invalid book description";
+    // else
+    //    $errors["bookdescription"] = "";
 
 
     // Counting number of errors
@@ -66,7 +66,7 @@ if (isset($_POST['add_book']) && isset($_SESSION["email"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/old_books.css">
+    <link rel="stylesheet" type="text/css" href="css/old_books_info.css">
     <title>Document</title>
 
     <!-- CSS for indication of book added or not -->
@@ -83,9 +83,7 @@ if (isset($_POST['add_book']) && isset($_SESSION["email"])) {
         <li><a href="my_account.php">My Account</a></li>
     </ul>
 
-    <div class="infoHeader">
-        <h2>Fill the following contents to sale your Old semester books</h2>
-    </div>
+    
 
     <div class="result-container">
         <p class="result-content">book Added successfully</p>
@@ -106,7 +104,7 @@ if (isset($_POST['add_book']) && isset($_SESSION["email"])) {
         $image_name = time() . "." . $image_type;
 
         // Path of the book image
-        $image_path = "D:/xampp/htdocs/my/mysem_books/book_images/$image_name";
+        $image_path = "H:/xampp/htdocs/MY/book_images/$image_name";
 
         // Checking if the book image file is uploaded
         if (move_uploaded_file($book_image["tmp_name"], $image_path)) {
@@ -132,10 +130,13 @@ if (isset($_POST['add_book']) && isset($_SESSION["email"])) {
             $errors["bookimage"] = "Unable to upload the file";
     }
     ?>
-
+    
     <div class="otherBooks-F">
         <form method="POST" action="" enctype="multipart/form-data">
             <div class="content-1">
+            <div class="infoHeader">
+        <h3><i>Fill the following contents to sale your old semester books</i></h3>
+    </div><br><hr><br><br>
                 <label class="bookDetails">Select Book image:</label><br>
                 <input type="file" name="book_image"><br><br>
                 <p class="errors"><?php echo $errors["bookimage"]; ?></p>
@@ -149,29 +150,20 @@ if (isset($_POST['add_book']) && isset($_SESSION["email"])) {
                 <div class="space"></div><br>
                 <label class="bookDetails">catagory</label><br>
                 <select name="o_catagory">
-                    <option value="C-language">C-language</option>
-                    <option value="C++-language">C++-language</option>
-                    <option value="Java-language">Java-language</option>
-                    <option value="R Programming">R Programming </option>
-                    <option value="ALP">ALP</option>
-                    <option value="Python">Python</option>
-                    <option value="Andriod">Andriod</option>
-                    <option value="HTML">HTML</option>
-                    <option value="CSS">CSS</option>
-                    <option value="PHP and MySQL">PHP and MySQL</option>
-                    <option value="Visual Basics(VB6)">Visual Basics(VB6)</option>
-                    <option value="Oracle">Oracle</option>
-                    <option value="Data Structures">Data Structures</option>
-                    <option value="Digital Principles">Digital Principles</option>
-                    <option value="Discrete Mathematics">Discrete Mathematics</option>
-                    <option value="Operation Research">Operation Research</option>
-                    <option value="OS and UNIX">OS and UNIX</option>
-                    <option value="Cloud Computing">Cloud Computing</option>
-                    <option value="AI and ML">AI and ML</option>
-                    <option value="Data Networks">Data Communications and Networks</option>
-                    <option value="Software Engineering">Software Engineering</option>
-                    <option value="Computer Graphics">Computer Graphics</option>
-                    <option value="DOT Net">DOT Net</option>
+                    <option value="tamil">tamil</option>
+                    <option value="english">english</option>
+                    <option value="maths">maths</option>
+                    <option value="physics">physics</option>
+                    <option value="chemistry">chemistry</option>
+                    <option value="computer science">computer science</option>
+                    <option value="bba">bba</option>
+                    <option value="b.com General">b.com General</option>
+                    <option value="b.com Coperate">b.com Coperate</option>
+                    <option value="b.com Chated account">b.com Chated account</option>
+                    <option value="Economics">Economics</option>
+                    <option value="visual communication">visual communication</option>
+                    <option value="Zoology">Zoology</option>
+                    <option value="botony">botony</option>
                     <option value="OTHERS">OTHERS</option>
                 </select>
                 <div class="space"></div><br>
@@ -181,10 +173,14 @@ if (isset($_POST['add_book']) && isset($_SESSION["email"])) {
                 <p class="errors"><?php echo $errors["bookdescription"]; ?></p>
                 <div class="space"></div><br>
                 <label class="bookDetails">Price Amount</label><br>
-                <input name="o_rate" type="number" placeholder="Rupees" value="<?php echo $book_price ?>">
+                <input name="o_rate" type="number" placeholder="Rupees" value="<?php echo $book_price ?>"><br><br>
+                <input type="submit" name="add_book" value="Add book" class="btn-add">
             </div>
-            <input type="submit" name="add_book" value="Add book">
-        </form>
+            
+        </form></div>
+        <div class="content-2">
+            <img src="e6.png" alt="image">
+        </div>
     </div>
 </body>
 

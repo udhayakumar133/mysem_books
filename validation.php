@@ -22,13 +22,13 @@ class validation
         else
             return false;
     }
-    function description($input)
+    /*function description($input)
     {
         if (!preg_match("/^.*[a-zA-z0-9]$/i", $input))
             return true;
         else
             return false;
-    }
+    } */
     function year($input)
     {
         if (!preg_match("/^[0-9]{4}$/", $input))

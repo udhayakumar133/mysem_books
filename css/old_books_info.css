@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: monospace;
+}
+
+/* First part
+    Navication bar content */
+
+ul{
+    width: 100%;
+    background:  #0082e6;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+ul li a{
+    text-decoration: none;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    display: inline-block;
+    margin: 0px 20px;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+}
+ul li a:hover{
+    background-color:#1b9bff;
+}
+
+/* Part 2
+    information about the page */
+
+    .infoHeader
+    {
+    margin-top: 0%;
+    margin-left: 3%;
+    opacity: 0.8;
+    width: 100%;
+    background: #fff;
+    }
+        
+    .infoHeader h3
+    {
+    color: #1b9bff;
+    padding: 3px;
+    font-size: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    }
+    
+
+
+
+/* Part -3
+    Other books link/pdf addind container */
+
+    .otherBooks-F
+    {
+        width: 100%;
+        height: 100%;
+        margin-top: 0%;
+        position: relative;
+        color: red;
+        border-radius: 5px;
+
+    }
+    
+    .otherBooks-F .content-1
+    {
+        position: absolute;
+        width: 50%;
+        padding-left: 5%;
+        padding-top: 2%;
+        padding-bottom: 0;
+        top: 0;
+    
+    }
+    
+    
+    .otherBooks-F label.bookDetails
+    {
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font: 1em sans-serif;
+        text-transform: uppercase;
+    }
+    
+    .otherBooks-F input,textarea
+    {
+        width: 80%;
+        padding: 5px;
+    }
+    
+    /* button part */
+    
+    .btn-add button
+    {
+        padding: 8px;
+        font-size: 18px;
+        text-align: center;
+        border: 0;
+        font-weight: bold;
+        margin-left: 5%;
+        margin-top: 1%;
+        border-radius: 5px;
+        width: 16%;
+        color: #fff;
+        background: #1b9bff;
+    }
+    
+    .btn-add button:hover
+    {
+        background: red;
+        cursor: pointer;
+    }
+
+    .content-2 {
+        position: relative;
+        width: 40%;
+        float: right;
+        
+    }
+    .content-2 img 
+    {
+        width: 100%;
+        height: 100%;
+        
+    }    
+    
