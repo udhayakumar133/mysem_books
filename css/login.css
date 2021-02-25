@@ -12,29 +12,7 @@ body {
 
 /* header  */
 
-ul {
-  width: 100%;
-  background: #0082e6;
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  position: sticky;
-  top: 0;
-  left: 0;
-}
-ul li a {
-  text-decoration: none;
-  font-family: sans-serif;
-  text-transform: capitalize;
-  display: inline-block;
-  margin: 0px 20px;
-  padding: 20px;
-  color: white;
-  font-weight: bold;
-}
-ul li a:hover {
-  background-color: #1b9bff;
-}
+
 /* part -1 
     form container */
 

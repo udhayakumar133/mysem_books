@@ -6,7 +6,7 @@
 }
 
 /* part 1
-    header for old books */
+    header for old books 
 ul{
     width: 100%;
     background:  #0082e6;
@@ -29,7 +29,7 @@ ul li a{
 }
 ul li a:hover{
     background-color:#1b9bff;
-}
+} */
 
 /* part 2 search box  */
 
@@ -48,7 +48,7 @@ ul li a:hover{
 .cont-2 .search-box
 {
     width: 70%;
-    padding-left: 5%;
+    margin-left: 20%;
     display: flex;
 }
 
@@ -85,34 +85,7 @@ ul li a:hover{
 
 /* Log in button creation */
 
-.cont-2 .login-btn
-{
-    width: 30%;
-    
-}
 
-.cont-2 .login-btn button
-{
-    width: 25%;
-    height: 40%;
-    padding: 18px;
-    font-family: monospace, serif;
-    font-weight: bold;
-    font-size: 1em;
-    color: #fff;
-    text-align: center;
-    background: red;
-    float: right;
-    margin-right: 10%;
-    border: 0;
-    border-radius: 5px 5px 5px 5px;
-}
-
-.cont-2 .login-btn button:hover
-{
-    cursor: pointer;
-    background: #1b9bff;
-}
 /* part 2
     banner image for old books */
 

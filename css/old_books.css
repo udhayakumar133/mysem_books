@@ -3,35 +3,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+   
 }
 
-/* part 1
-    header for old books */
-ul{
-    width: 100%;
-    background:  #0082e6;
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    position: sticky;
-    top: 0;
-    left: 0;
-}
-ul li a{
-    text-decoration: none;
-    font-family: sans-serif;
-    text-transform: capitalize;
-    display: inline-block;
-    margin: 0px 20px;
-    padding: 20px;
-    color: white;
-    font-weight: bold;
-}
-ul li a:hover{
-    background-color:#1b9bff;
-}
 
-/* search box */
+
+
+/* part 2 search box  */
 
 .cont-2
 {
@@ -41,12 +19,14 @@ ul li a:hover{
     position: relative;
     padding-top: 5%;
 }
+
 /* search box creation */
+
 
 .cont-2 .search-box
 {
     width: 70%;
-    padding-left: 5%;
+    margin-left: 20%;
     display: flex;
 }
 
@@ -81,52 +61,24 @@ ul li a:hover{
     background: red;
 }
 
-/* Log in button creation */
 
-.cont-2 .login-btn
-{
-    width: 30%;
-    
-}
 
-.cont-2 .login-btn button
-{
-    width: 25%;
-    height: 40%;
-    padding: 18px;
-    font-family: monospace, serif;
-    font-weight: bold;
-    font-size: 1em;
-    color: #fff;
-    text-align: center;
-    background: red;
-    float: right;
-    margin-right: 10%;
-    border: 0;
-    border-radius: 5px 5px 5px 5px;
-}
-
-.cont-2 .login-btn button:hover
-{
-    cursor: pointer;
-    background: #1b9bff;
-}
 /* part 2
     banner image for old books */
 
-.img-box
-{
-    height: 200px;
-    width: 100%;
-    background: red;
-    margin-top: 2%;
-}
+    .img-box
+    {
+        height: 200px;
+        width: 100%;
+        margin-top: 2%;
+    }
+    
+    .img-box img 
+    {
+        height: 200px;
+        width: 100%;
+    }
 
-.img-box img 
-{
-    height: 200px;
-    width: 100%;
-}
 
 /* part 3
     button for user account */
@@ -168,3 +120,7 @@ ul li a:hover{
     background: red;
     cursor: pointer;
 }
+
+
+
+

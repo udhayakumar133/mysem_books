@@ -39,10 +39,10 @@ if (isset($_POST['add_link']) && isset($_SESSION["email"])) {
         $errors["link_author_name"] = "";
 
     // Validating description 
-    if ($validation_obj->description($link_book_description))
-        $errors["link_book_description"] = "Invalid book description";
-    else
-        $errors["link_book_description"] = "";
+    //if ($validation_obj->description($link_book_description))
+    //    $errors["link_book_description"] = "Invalid book description";
+    //else
+    //    $errors["link_book_description"] = "";
 
 
     // Validating description 
@@ -66,8 +66,8 @@ if (isset($_POST['add_link']) && isset($_SESSION["email"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/recommends_info.css">
-    <link rel="stylesheet" href="css/result_indication.css">
+    <link rel="stylesheet" type="text/css" href="./css/recommends_info.css">
+    <link rel="stylesheet" href="./css/result_indication.css">
     <title>Document</title>
 </head>
 
@@ -80,9 +80,7 @@ if (isset($_POST['add_link']) && isset($_SESSION["email"])) {
         <li><a href="my_account.php">My Account</a></li>
     </ul>
 
-    <div class="infoHeader">
-        <h2>Fill the following contents to post your links of books</h2>
-    </div>
+    
 
     <div class="result-container">
         <p class="result-content">Link Added successfully</p>
@@ -119,6 +117,9 @@ if (isset($_POST['add_link']) && isset($_SESSION["email"])) {
     <div class="otherBooks-F">
         <form method="POST" action="">
             <div class="content-1">
+            <div class="infoHeader">
+                <h3><i>Fill the following contents to post your links of books<i></h3>
+            </div><br><hr><br><br>
                 <label class="bookDetails">Book Name</label><br><input name="l_bName" type="text" height="2px" placeholder="Enter Book name" value="<?php echo $link_book_name; ?>">
                 <p class="errors"><?php echo $errors["link_book_name"] ?></p>
                 <div class="space"></div><br>
@@ -127,29 +128,20 @@ if (isset($_POST['add_link']) && isset($_SESSION["email"])) {
                 <div class="space"></div><br>
                 <label class="bookDetails">catagory</label><br>
                 <select name="l_catagory">
-                    <option value="C-language">C-language</option>
-                    <option value="C++-language">C++-language</option>
-                    <option value="Java-language">Java-language</option>
-                    <option value="R Programming">R Programming </option>
-                    <option value="ALP">ALP</option>
-                    <option value="Python">Python</option>
-                    <option value="Andriod">Andriod</option>
-                    <option value="HTML">HTML</option>
-                    <option value="CSS">CSS</option>
-                    <option value="PHP and MySQL">PHP and MySQL</option>
-                    <option value="Visual Basics(VB6)">Visual Basics(VB6)</option>
-                    <option value="Oracle">Oracle</option>
-                    <option value="Data Structures">Data Structures</option>
-                    <option value="Digital Principles">Digital Principles</option>
-                    <option value="Discrete Mathematics">Discrete Mathematics</option>
-                    <option value="Operation Research">Operation Research</option>
-                    <option value="OS and UNIX">OS and UNIX</option>
-                    <option value="Cloud Computing">Cloud Computing</option>
-                    <option value="AI and ML">AI and ML</option>
-                    <option value="Data Networks">Data Communications and Networks</option>
-                    <option value="Software Engineering">Software Engineering</option>
-                    <option value="Computer Graphics">Computer Graphics</option>
-                    <option value="DOT Net">DOT Net</option>
+                    <option value="tamil">tamil</option>
+                    <option value="english">english</option>
+                    <option value="maths">maths</option>
+                    <option value="physics">physics</option>
+                    <option value="chemistry">chemistry</option>
+                    <option value="computer science">computer science</option>
+                    <option value="bba">bba</option>
+                    <option value="b.com General">b.com General</option>
+                    <option value="b.com Coperate">b.com Coperate</option>
+                    <option value="b.com Chated account">b.com Chated account</option>
+                    <option value="Economics">Economics</option>
+                    <option value="visual communication">visual communication</option>
+                    <option value="Zoology">Zoology</option>
+                    <option value="botony">botony</option>
                     <option value="OTHERS">OTHERS</option>
                 </select>
                 <div class="space"></div><br>
@@ -160,13 +152,14 @@ if (isset($_POST['add_link']) && isset($_SESSION["email"])) {
                 <p class="errors"><?php echo $errors["link_book_description"] ?></p>
                 <label class="bookDetails">Enter your Pdf/document Link Here</label><br>
                 <input name="l_link" type="text" placeholder="Eg. Http://google.com" value="<?php echo $link_book_link; ?>">
-                <p class="errors"><?php echo $errors["link_book_link"] ?></p>
-            </div>
-
-            <div class="c-btn-1">
+                <p class="errors"><?php echo $errors["link_book_link"] ?></p><br>
+            
                 <input type="submit" name="add_link" value="Add link">
-            </div>
+                <br></div>
         </form>
+        <div class="content-2" style="position: relative; width: 40%;float: right; ">
+            <img src="e7.jpg" alt="image" style="width: 100%; height: 100%;">
+        </div></div>
     </div>
 </body>
 
