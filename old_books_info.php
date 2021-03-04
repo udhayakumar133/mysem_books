@@ -83,7 +83,7 @@ if (isset($_POST['add_book']) && isset($_SESSION["email"])) {
         <li><a href="my_account.php">My Account</a></li>
     </ul>
 
-    
+
 
     <div class="result-container">
         <p class="result-content">book Added successfully</p>
@@ -130,13 +130,14 @@ if (isset($_POST['add_book']) && isset($_SESSION["email"])) {
             $errors["bookimage"] = "Unable to upload the file";
     }
     ?>
-    
+
     <div class="otherBooks-F">
         <form method="POST" action="" enctype="multipart/form-data">
             <div class="content-1">
-            <div class="infoHeader">
-        <h3><i>Fill the following contents to sale your old semester books</i></h3>
-    </div><br><hr><br><br>
+                <div class="infoHeader">
+                    <h3><i>Fill the following contents to sale your old semester books</i></h3>
+                </div><br>
+                <hr><br><br>
                 <label class="bookDetails">Select Book image:</label><br>
                 <input type="file" name="book_image"><br><br>
                 <p class="errors"><?php echo $errors["bookimage"]; ?></p>
@@ -176,11 +177,12 @@ if (isset($_POST['add_book']) && isset($_SESSION["email"])) {
                 <input name="o_rate" type="number" placeholder="Rupees" value="<?php echo $book_price ?>"><br><br>
                 <input type="submit" name="add_book" value="Add book" class="btn-add">
             </div>
-            
-        </form></div>
-        <div class="content-2">
-            <img src="e6.png" alt="image">
-        </div>
+
+        </form>
+    </div>
+    <div class="content-2">
+        <img src="e6.png" alt="image">
+    </div>
     </div>
 </body>
 

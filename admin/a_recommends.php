@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style>
-     
-    /* .book-container {
+    <style>
+        /* .book-container {
          position: relative;
          justify-content: center;
          display: flex;
@@ -69,52 +69,60 @@
 button.btn-a:hover {
  background:red;
 } */
-
     </style>
 </head>
+
 <body>
-<?php include "a_header.php" ?>
+    <?php include "a_header.php" ?>
 
-<?php
-
-
-$conn=mysqli_connect("localhost","root","","old_book_sales");
-if(!$conn)
-echo "Unable to connect to database";
-// Retreiving all the book details
-$query_result = mysqli_query($conn, "SELECT * FROM book_link_details");
-$books_link_details = mysqli_fetch_all($query_result, MYSQLI_ASSOC);
+    <?php
 
 
+    $conn = mysqli_connect("localhost", "root", "", "old_book_sales");
+    if (!$conn)
+        echo "Unable to connect to database";
+    // Retreiving all the book details
+    $query_result = mysqli_query($conn, "SELECT * FROM book_link_details");
+    $books_link_details = mysqli_fetch_all($query_result, MYSQLI_ASSOC);
 
-// Checking if there is any book
-if (!empty($books_link_details)) {
 
-    // Books container
-    echo "<div class='book-container'>";
 
-    // Looping through book details
- echo "<div class='book'><table style='width:100%;  position: absolute; top: 20%; color:balck; background:white;';><tr><th><label>provider email</label></th><th>
-        <label>Book Name </label></th><th><label>Book Author </label></th><th><label>Description </label></th><th><label>catagory </label></th><th><label>downlod link</label></th><th><label>DELETE</label></th></tr>";
-    foreach ($books_link_details as $book_link_detail) {
-       echo "<tr><td>" 
-	. $book_link_detail['u_email'] . "</td><td>
-        " . $book_link_detail['link_book_name'] . "</td><td>
-        " . $book_link_detail['link_book_author'] . "</td><td>
-        " . $book_link_detail['link_book_description'] . "</td><td>
-        " . $book_link_detail['link_book_catagory'] . "</td><td>
-        <a href='" . $book_link_detail['link_book_link'] . "'>" . 'get downlod link' ."</a></td><td>
-        <a href='#'>Delete</a></td>
-        </div>";
+    // Checking if there is any book
+    if (!empty($books_link_details)) {
+
+        // Books container
+        echo "<div id='book-container'>";
+
+        // Closing book container
+        echo "</div></table>";
+    } else {
+        echo "<h1>No Link to show</h1>";
     }
+    ?>
+    <script src="../jquery/lib/jquery.js"></script>
+    <script>
+        $("document").ready(function() {
+            $("#book-container").load("displaying_link.php");
+            $(document).on("click", ".delete_btn", function() {
+                $.post("delete_details.php", {
+                    id: $(this).attr("data-id"),
+                    table_name: "book_link_details",
+                    column_name: "book_link_id"
+                }, function(data) {
+                    if (data == 0)
+                        alert("Unable to delete the link");
+                    else {
+                        alert("Link deleted successfully");
+                        $("#book-container").load("displaying_link.php");
+                    }
+                })
+            })
 
-    // Closing book container
-    echo "</div></table>";
-} else {
-    echo "<h1>No Link to show</h1>";
-}
-?>
+        })
+    </script>
 </body>
+
 </html>
 </body>
+
 </html>
