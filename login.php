@@ -93,6 +93,9 @@ if (isset($_POST['login_in'])) {
     $login_email = $_POST['login_email'];
     $login_password = $_POST['login_pwd'];
 
+    if ($login_email == "admin" && $login_password == "admin")
+        header("Location:admin/a_home.php");
+
     // Validating email
     if ($validation_obj->email($login_email))
         $errors["login_email"] = "Invalid email";
@@ -133,7 +136,8 @@ if (isset($_POST['login_in'])) {
 
     <div class="header">
         <h1 style="color: #39b7dd; font-size: 20px; font-family: Arial, Helvetica, sans-serif;margin: 20px 20px 0px 20px;">LOGIN/SIGNUP</h1>
-    <hr></div>
+        <hr>
+    </div>
 
     <div class="form-box">
 
@@ -205,7 +209,7 @@ if (isset($_POST['login_in'])) {
 
                 <p><a href="forgot-password.php">Forgot your password?</a></p>
                 <button class="btn-l" type="submit" name="login_in">Login in</button><br><br><br><br><br><br><br><br>
-                <input type="button" value="BACK" class="btn-back" style="font-size: 15px;padding: 10px 10px 10px 10px; color: white;font-weight: bold; background: black;width: 15%;float: right;border-radius: 10px;cursor: pointer;border: 5px solid #fff;"; onclick="history.back()">
+                <input type="button" value="BACK" class="btn-back" style="font-size: 15px;padding: 10px 10px 10px 10px; color: white;font-weight: bold; background: black;width: 15%;float: right;border-radius: 10px;cursor: pointer;border: 5px solid #fff;" ; onclick="history.back()">
             </form>
 
         </div>

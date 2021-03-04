@@ -1,7 +1,14 @@
+<?php
+include "config.php";
+
+$users_count = mysqli_fetch_array(mysqli_query($conn, "SELECT COUNT(*) FROM login_details"))[0];
+$books_count = mysqli_fetch_array(mysqli_query($conn, "SELECT COUNT(*) FROM book_details"))[0];
+$links_count = mysqli_fetch_array(mysqli_query($conn, "SELECT COUNT(*) FROM book_link_details"))[0];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include"a_header.php" ?>
+<?php include "a_header.php" ?>
 
 <head>
     <meta charset="UTF-8">
@@ -10,68 +17,83 @@
     <title>Document</title>
     <style>
         .user_container {
-            height:350px;
-            width:80%;
-            left:10%;
-            padding:2%;
+            height: 350px;
+            width: 80%;
+            left: 10%;
+            padding: 2%;
             background: white;
-            top:30%;
+            top: 30%;
             position: absolute;
         }
 
         .user_container {
-            color:#0082e6;
+            color: #0082e6;
         }
+
         .u_count {
-            height:50px;
+            height: 50px;
             width: 50px;
-            border : 1px solid black;
-           
-            
-        }
-        .b_count {
-            height:50px;
-            width: 50px;
-            border : 1px solid black;
-            
-          
+            border: 1px solid black;
+
 
         }
-        .l_count {
-            height:50px;
+
+        .b_count {
+            height: 50px;
             width: 50px;
-            border : 1px solid black;
-            
-            
+            border: 1px solid black;
+
+
+
+        }
+
+        .l_count {
+            height: 50px;
+            width: 50px;
+            border: 1px solid black;
+
+
         }
 
         button {
             position: absolute;
-            top:85%;
-            left:77%; 
-            font-size:18px;
+            top: 85%;
+            left: 77%;
+            font-size: 18px;
             padding: 1% 2% 1% 2%;
-            border:none;
+            border: none;
             background: #0082e6;
             cursor: pointer;
             font-weight: bold;
 
         }
+
         button:hover {
             background: red;
         }
     </style>
 </head>
+
 <body>
-    
+
     <div class="user_container">
-        <h2 >USERS </h2><br><div class="u_count"></div><br>
-        <h2 >BOOKS </h2><br><div class="b_count"></div><br>
-        <h2 >LINKS </h2><br><div class="l_count"></div><br>
-        <h1 style="float: right; right:50%;top: 20%; position: absolute;";>ANNOUNCEMENTS</h1>
-        <textarea rows="7" cols="50" placeholder="Type here..." style="position: absolute;top:35%;left:35%; font-size:18px;";></textarea>
+        <h2>USERS </h2><br>
+        <div class="u_count">
+            <h1><?php echo $users_count ?></h1>
+        </div><br>
+        <h2>BOOKS </h2><br>
+        <div class="b_count">
+            <h1><?php echo $books_count ?></h1>
+        </div><br>
+        <h2>LINKS </h2><br>
+        <div class="l_count">
+            <h1><?php echo $links_count ?></h1>
+        </div><br>
+        <h1 style="float: right; right:50%;top: 20%; position: absolute;" ;>ANNOUNCEMENTS</h1>
+        <textarea rows="7" cols="50" placeholder="Type here..." style="position: absolute;top:35%;left:35%; font-size:18px;" ;></textarea>
         <button action="#" value="add">ADD</button>
     </div>
-    
+
 </body>
+
 </html>
