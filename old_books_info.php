@@ -104,7 +104,7 @@ if (isset($_POST['add_book']) && isset($_SESSION["email"])) {
         $image_name = time() . "." . $image_type;
 
         // Path of the book image
-        $image_path = "H:/xampp/htdocs/MY/book_images/$image_name";
+        $image_path = "book_images/$image_name";
 
         // Checking if the book image file is uploaded
         if (move_uploaded_file($book_image["tmp_name"], $image_path)) {
