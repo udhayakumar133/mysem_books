@@ -25,7 +25,7 @@ $user_email = $_SESSION['email'];
             box-sizing: border-box;
         }
 
-        #book-container {
+        #book_container {
             position: relative;
             justify-content: center;
             display: flex;
@@ -37,7 +37,7 @@ $user_email = $_SESSION['email'];
 
         }
 
-        #book-container .book {
+        #book_container .book {
             position: relative;
             width: 46%;
             border: 1px solid black;
@@ -48,17 +48,17 @@ $user_email = $_SESSION['email'];
             display: flex;
         }
 
-        #book-container .book .imgBox {
+        #book_container .book .imgBox {
             max-width: 150px;
             flex: 0 0 150px;
 
         }
 
-        #book-container .book .imgBox img {
+        #book_container .book .imgBox img {
             max-width: 100%;
         }
 
-        #book-container .book .content {
+        #book_container .book .content {
             margin-left: 20px;
             color: black;
             font-weight: bold;
@@ -66,7 +66,7 @@ $user_email = $_SESSION['email'];
 
         }
 
-        #book-container .book .content label {
+        #book_container .book .content label {
             font-weight: bold;
             color: green;
             font-family: cursive;
@@ -168,7 +168,7 @@ $user_email = $_SESSION['email'];
                 <label>Description :</label>" . $books_detail['book_description'] . "<br>
                 <label>catagory :</label>" . $books_detail['catagory'] . "<br>
                 <label>Price :</label>" . $books_detail['price'] . "<br>
-                <button class='btn-a'>Book now</button>
+                <button class='btn-a' data-id='" . $books_detail['book_id'] . "' data-email='" . $books_detail['u_email'] . "'>Book now</button>
             </div> </div>";
         }
 
@@ -208,6 +208,18 @@ $user_email = $_SESSION['email'];
                         $("#book_container").html(data);
                 })
             });
+
+            $(document).on("click", ".btn-a", function() {
+                $.post("place_orders.php", {
+                    book_id: $(this).attr("data-id"),
+                    owner_email: $(this).attr("data-email")
+                }, function(data) {
+                    if (data == 1)
+                        alert("Order placed sucessfully");
+                    else
+                        alert("Unable to place the order");
+                })
+            })
         })
     </script>
 </body>

@@ -36,6 +36,7 @@
             <li><a href="#">Recommend</a></li>
             <li><a href="#">LOGIN</a></li>
             <li><a href="#">MY ACCOUNT</a></li>
+            <li><a href="my_orders.php">My orders</a></li>
         </ul>
     </nav>
     <div class="container">
